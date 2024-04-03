@@ -1,0 +1,282 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+@font-face {
+    font-family: 'Nanum Square';
+    src: url("./fonts/Nanum/NanumSquareL.ttf") format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nanum Square';
+    src: url("./fonts/Nanum/NanumSquareR.ttf") format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nanum Square';
+    src: url("./fonts/Nanum/NanumSquareB.ttf") format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nanum Square';
+    src: url("./fonts/Nanum/NanumSquareEB.ttf") format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+/* 공용 스타일링 */
+
+.nanumsquare * {
+    font-family: 'Nanum Square', sans-serif;
+}
+
+.deSelect {
+    user-select: none;
+}
+
+.blur {
+    filter: blur(0);
+    -webkit-filter: blur(0);
+    animation: blurMOtion 1s forwards;
+}
+
+.SliderDot {
+    position: absolute;
+    bottom: -25px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.SliderDot li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+.SliderDot li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.SliderDot li button:hover,
+.SliderDot li button:focus {
+    outline: none;
+}
+
+.SliderDot li button:hover:before,
+.SliderDot li button:focus:before {
+    opacity: 1;
+}
+
+.SliderDot li button:before {
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    opacity: .25;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.SliderDot li.slick-active button:before {
+    opacity: .75;
+    color: white;
+}
+
+* {
+    scrollbar-width: thin;
+}
+
+*::-moz-scrollbar-track {
+    background-color: #000000;
+}
+
+*::-moz-scrollbar-thumb {
+    background-color: #525252;
+}
+
+*::-moz-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+    /* 스크롤바의 너비 */
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+    /* 스크롤바 트랙 배경색 */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #525252;
+    /* 스크롤바 색상 */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* 스크롤바 hover 상태 색상 */
+}
+
+/* 공용 애니메이션 */
+
+.fadeIn {
+    opacity: 0;
+    position: relative;
+    top: 20px;
+    animation: fadeIn 0.5s forwards;
+}
+
+.fadeOut {
+    opacity: 1;
+    position: relative;
+    top: 0;
+    animation: fadeOut 0.5s forwards;
+}
+
+.fadeInStatics {
+    opacity: 0;
+    animation: fadeInStatics 1s forwards;
+}
+
+.fadeOutStatics {
+    opacity: 1;
+    animation: fadeOutStatics 0.2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        top: 20px;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        top: 0;
+    }
+    to {
+        opacity: 0;
+        top: 20px;
+    }
+}
+
+@keyframes fadeOutStatics {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInStatics {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInStatic {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        background-size: 100%;
+    }
+    to {
+        background-size: 130%;
+    }
+}
+
+@keyframes zoomOut {
+    from {
+        background-size: 130%;
+    }
+    to {
+        background-size: 100%;
+    }
+}
+
+@keyframes blinker {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes blurMOtion {
+    from {
+        filter: blur(0);
+        -webkit-filter: blur(0);
+    }
+    to {
+        filter: blur(20px);
+        -webkit-filter: blur(20px);
+    }
+}
+
+/* App 스타일링 */
+
+.App {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}

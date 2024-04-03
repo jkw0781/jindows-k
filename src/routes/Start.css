@@ -1,0 +1,71 @@
+.layer {
+    position: relative; /* 부모 요소에 상대 위치 설정 */
+}
+
+.layer span {
+    width: 50vw;
+    position: absolute;
+    display: inline-block;
+    opacity: 0;
+    transform: translate(-50%, -50%); /* 중앙 정렬을 위한 이동 */
+}
+
+.layer span:first-child {
+    animation: fadeInStatic 3s forwards;
+    animation-delay: 1s;
+}
+
+.layer span:not(:last-child, :first-child) {
+    animation: fadeInStatic 3s forwards;
+    animation-delay: 4s;
+}
+
+.layer span:last-child {
+    animation: fadeInStatic 3s forwards;
+    animation-delay: 7s;
+}
+
+.mainText {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 3vw;
+}
+
+header {
+    position: relative;
+    top: 15px;
+}
+
+header a {
+    text-decoration: none;
+    color: rgb(226, 226, 226);
+    font-size: 1.5vw;
+    margin: 0 15px;
+}
+
+header a.active {
+    font-weight: 600;
+}
+
+header div {
+    text-align: center;
+    padding: 10px;
+}
+
+@media all and (max-width: 1200px) {
+
+    @media (orientation: portrait) {
+        .mainText {
+            font-size: 4vh;
+        }
+    }
+    
+    @media (orientation: landscape) {
+        .mainText {
+            font-size: 4vw;
+        }
+    }
+}

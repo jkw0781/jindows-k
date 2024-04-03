@@ -1,0 +1,77 @@
+.circle1,
+.circle2,
+.circle3,
+.circle4,
+.circle5 {
+    background-color: transparent;
+    position: absolute;
+    opacity: 0;
+    width: 2.2vw;
+    height: 2.2vw;
+    border-radius: 2.2vw;
+}
+
+.circle1 {
+    animation: rotate 5s infinite linear;
+    animation-delay: 0.1s;
+}
+
+.circle2 {
+    animation: rotate 5s infinite linear;
+    animation-delay: 0.2s;
+}
+
+.circle3 {
+    animation: rotate 5s infinite linear;
+    animation-delay: 0.3s;
+}
+
+.circle4 {
+    animation: rotate 5s infinite linear;
+    animation-delay: 0.4s;
+}
+
+.circle5 {
+    animation: rotate 5s infinite linear;
+    animation-delay: 0.5s;
+}
+
+@keyframes rotate {
+    4% {
+        opacity: 0;
+        transform: rotate(-135deg);
+    }
+    5% {
+        opacity: 1;
+        transform: rotate(-135deg);
+    }
+    30% {
+        transform: rotate(135deg);
+    }
+    35% {
+        transform: rotate(225deg);
+    }
+    60% {
+        transform: rotate(485deg);
+    }
+    65% {
+        transform: rotate(600deg);
+    }
+    90% {
+        opacity: 1;
+        transform: rotate(850deg);
+    }
+    91% {
+        opacity: 0;
+        transform: rotate(850deg);
+    }
+}
+
+.dot {
+    position: relative;
+    margin: 0 auto;
+    width: 0.22vw;
+    height: 0.22vw;
+    border-radius: 0.22vw;
+    background-color: white;
+}
