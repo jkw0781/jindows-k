@@ -1,7 +1,7 @@
 .warning {
     position: fixed;
     font-size: 20px;
-    width: 100%;
+    width: 100vw;
     color: white;
     background-color: #ff7323;
     z-index: 999999;
@@ -11,6 +11,7 @@
 }
 
 .warning span:last-child {
+    width: 90%;
     padding-left: 10px;
 }
 
@@ -514,11 +515,13 @@
         margin: 0 auto;
     }
 
-    .primaryBtn {
+    .primaryBtn,
+    .primaryBtnDisabled {
         position: relative;
         left: 50%;
         transform: translateX(-50%);
     }
+    
 }
 
 @media all and (max-width: 600px) {
